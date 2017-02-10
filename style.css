@@ -1,0 +1,155 @@
+body{
+  margin: 0;
+
+}
+
+
+.box{
+  float: left;
+  height:25vh;
+  width:25vh;
+  margin: 5px;
+  display:inline-block;
+  background-color: skyblue;
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+.move {
+  animation-name: move-it;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.pulse {
+  animation: pulse 10s infinite;
+}
+.fade {
+  animation: fade 10s infinite;
+}
+
+.move-2{
+  animation: move-2 10s 5s infinite;
+}
+.grow{
+  animation: grow 5s infinite;
+}
+
+.shrink{
+  animation: shrink 5s infinite;
+}
+
+.pullUp{
+  animation: pullUp 5s infinite;
+  transform-origin: 50% 100%;
+}
+.pullUp2 {
+  animation: pullUp2 5s infinite;
+  transform-origin: 50% 100%;
+}
+
+#translate:active{
+  transform: rotate(45deg);
+}
+#translate:hover{
+  animation-name: move-it;
+  animation-duration: 10s;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move-it {
+  99%{
+    transform: translate(50vw);
+
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    background-color: blue;
+  }
+  50% {
+    background-color: red;
+  }
+}
+
+@keyframes fade {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-2 {
+  50%{
+    transform: translate(-50vw, 50vh);
+  }
+}
+@keyframes grow {
+  50%{
+    transform: scale(2,2);
+  }
+}
+
+@keyframes shrink {
+  50%{
+    transform: scale(0,0);
+  }
+}
+
+/* http://www.justinaguilar.com/animations/ */
+
+@keyframes pullUp {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.02);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+@keyframes pullUp2 {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.02);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(0.98);
+	}
+	/*80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(1);
+	}*/
+}

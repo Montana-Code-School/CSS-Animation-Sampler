@@ -5,6 +5,7 @@ body{
 
 
 .box{
+  border-radius: 20%;
   float: left;
   height:25vh;
   width:25vh;
@@ -15,7 +16,7 @@ body{
 
 .spin {
   animation-name: spin;
-  animation-duration: 4s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-direction: reverse;
 }
@@ -23,12 +24,13 @@ body{
   animation-name: move-it;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  background-color: red;
 }
 .pulse {
-  animation: pulse 10s infinite;
+  animation: pulse 100s infinite;
 }
 .fade {
-  animation: fade 10s infinite;
+  animation: fade 5s infinite;
 }
 
 .move-2{
@@ -36,6 +38,7 @@ body{
 }
 .grow{
   animation: grow 5s infinite;
+  background-image:
 }
 
 .shrink{
@@ -45,10 +48,12 @@ body{
 .pullUp{
   animation: pullUp 5s infinite;
   transform-origin: 50% 100%;
+  background-color: yellow;
 }
 .pullUp2 {
   animation: pullUp2 5s infinite;
   transform-origin: 50% 100%;
+  background-color: orange;
 }
 
 #translate:active{
@@ -61,16 +66,18 @@ body{
 }
 
 @keyframes spin {
-  100%{
-    transform: rotate(360deg);
+  50%{
+    transform: scale(2,2) rotate(360deg);
   }
 }
 
 @keyframes move-it {
-  99%{
-    transform: translate(50vw);
+  50%{
+    transform: translate(80vw);
 
   }
+  /*from { transform: translate(1vw)}
+  to{ transform: translate3d(500vw)}*/
 }
 
 @keyframes pulse {
@@ -78,7 +85,7 @@ body{
     background-color: blue;
   }
   50% {
-    background-color: red;
+    background-color: purple;
   }
 }
 
@@ -89,19 +96,22 @@ body{
 }
 
 @keyframes move-2 {
-  50%{
+  33%{
     transform: translate(-50vw, 50vh);
+  }
+  66%{
+    transform: translate(0vw, 80vh);
   }
 }
 @keyframes grow {
   50%{
-    transform: scale(2,2);
+    transform: scale(1,2);
   }
 }
 
 @keyframes shrink {
   50%{
-    transform: scale(0,0);
+    transform: scale(0,2);
   }
 }
 
@@ -112,19 +122,19 @@ body{
 		transform: scaleY(0.1);
 	}
 	40% {
-		transform: scaleY(1.02);
+		transform: scaleY(2);
 	}
 	60% {
-		transform: scaleY(0.98);
+		transform: scaleY(0.75);
 	}
 	80% {
-		transform: scaleY(1.01);
+		transform: scaleY(1.1);
 	}
 	100% {
-		transform: scaleY(0.98);
+		transform: scaleY(0.9);
 	}
 	80% {
-		transform: scaleY(1.01);
+		transform: scaleY(1.1);
 	}
 	100% {
 		transform: scaleY(1);

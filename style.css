@@ -9,7 +9,7 @@ body{
   height:25vh;
   width:25vh;
   margin: 5px;
-  display:inline-block;
+  /*display:inline-block;*/
   background-color: skyblue;
 }
 
@@ -153,3 +153,39 @@ body{
 		transform: scaleY(1);
 	}*/
 }
+
+/** {
+  overflow: hidden;
+  margin: 0;
+}*/
+
+/*Jen's animation---------------------------*/
+@keyframes circle {
+	from {
+		transform: scale(0)
+	}
+	to {
+		transform: scale(3)
+	}
+}
+
+.circle {
+  margin: 300px;
+  width: 100px;
+  height: 100px;
+  border: 10px solid yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 40%;
+}
+.one {
+  animation: circle 8s infinite linear;
+}
+.two {
+  animation: circle 7s infinite linear;
+}
+.three {
+  animation: circle 6s infinite linear;
+}
+/*Jen's animation---------------------------*/

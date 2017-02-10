@@ -8,17 +8,21 @@ body{
   float: left;
   height:25vh;
   width:25vh;
+  border-radius: 10%;
   margin: 5px;
   display:inline-block;
   background-color: skyblue;
 }
 
-.spin {
-  animation-name: spin;
-  animation-duration: 4s;
+.spin-grow:hover {
+  /*animation-name: spin;*/
+  /*animation-duration: 4s;
   animation-iteration-count: infinite;
-  animation-direction: reverse;
+  animation-direction:alternate;*/
+  animation: spin-grow 5s infinite;
 }
+
+
 .move {
   animation-name: move-it;
   animation-duration: 5s;
@@ -42,13 +46,21 @@ body{
   animation: shrink 5s infinite;
 }
 
-.pullUp{
-  animation: pullUp 5s infinite;
-  transform-origin: 50% 100%;
+.spectrum{
+  animation: spectrum 10s infinite;
+
 }
 .pullUp2 {
-  animation: pullUp2 5s infinite;
-  transform-origin: 50% 100%;
+  animation: pullUp2 15s infinite;
+
+}
+
+.pulse-move-grow{
+  animation-name: pulse-move-grow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  border-radius: 100%
 }
 
 #translate:active{
@@ -60,10 +72,39 @@ body{
   animation-direction: reverse;
 }
 
+@keyframes pulse-move-grow {
+
+    0%,100% {
+		transform:
+               rotate(0deg)
+		           translate(-150px)
+		           rotate(0deg)
+               scale(1,1);
+               background-color:red;
+
+	}
+	  50% {
+		transform: rotate(360deg)
+		           translate(-150px)
+		           rotate(-360deg)
+               scale(2,2);
+               background-color:purple;
+
+	}
+
+
+}
+
 @keyframes spin {
   100%{
     transform: rotate(360deg);
   }
+}
+
+@keyframes spin-grow {
+  100%{
+  transform: rotate(360deg) scale(2,2);
+}
 }
 
 @keyframes move-it {
@@ -75,10 +116,10 @@ body{
 
 @keyframes pulse {
   0%, 100% {
-    background-color: blue;
+    background-color: red;
   }
   50% {
-    background-color: red;
+    background-color: purple;
   }
 }
 
@@ -107,27 +148,24 @@ body{
 
 /* http://www.justinaguilar.com/animations/ */
 
-@keyframes pullUp {
+@keyframes spectrum {
 	0% {
-		transform: scaleY(0.1);
+		background-color:red;
+	}
+	20% {
+		background-color:orange;
 	}
 	40% {
-		transform: scaleY(1.02);
+		background-color:yellow;
 	}
 	60% {
-		transform: scaleY(0.98);
+		background-color:green;
 	}
 	80% {
-		transform: scaleY(1.01);
+		background-color:blue;
 	}
-	100% {
-		transform: scaleY(0.98);
-	}
-	80% {
-		transform: scaleY(1.01);
-	}
-	100% {
-		transform: scaleY(1);
+  100% {
+		background-color:purple;
 	}
 }
 @keyframes pullUp2 {
